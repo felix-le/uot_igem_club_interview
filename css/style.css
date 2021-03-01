@@ -1,0 +1,17 @@
+@import 'variables.css';
+.layer_bg{
+  background-image: url('../img/background.svg');
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
+  background-position: center;
+}
+
+#mario{
+  max-height: 200px;
+  width: fit-content;
+  position: absolute;
+  bottom: var(--floor);
+}
