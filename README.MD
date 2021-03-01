@@ -14,3 +14,5 @@ Bonus details: hand movement of the three characters
 I would like you to animate all the individual elements in the graphic following the Super Mario game. Example movement video: https://www.youtube.com/watch?v=eYYIfd6NgzI&ab_channel=NewSuperMarioBros.UChannel
 
 Let me know if you have questions. Thanks again for your interest in joining our group!
+
+

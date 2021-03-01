@@ -1,0 +1,10 @@
+@keyframes MoveUpDown {
+  100% {
+    bottom: 350px;
+  }
+}
+@keyframes leftToRight {
+  100%{
+    transform: translateX(10%);
+  }
+}

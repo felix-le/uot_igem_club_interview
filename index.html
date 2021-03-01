@@ -1,22 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mario</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <main>
     <h1>hello world</h1>
     <div class="content-wrapper">
-      <div class="layer_bg" data-name="layer_bg">
-        <img id="mario" src="img/mario.svg" alt="mario">
+      <div class="bg_layer" data-name="bg_layer">
+        <!-- Mario -->
+        <img id="mario" src="img/mario.svg" alt="mario" class="mario__forward">
+        <!-- End Mario -->
+        <!-- Water pipe -->
+        <img src="img/wall-1.svg" alt="wall 1" class="wall wall_1">
+        <img src="img/water_pipe.svg" class="water_pipe water_pipe_bottle" alt="water_pipe">
+        <img src="img/water_pipe.svg" class="water_pipe water_pipe_logo" alt="water_pipe">
+        <!-- End Water pipe -->
+       <!-- Wall -->
+        <img src="img/wall-2.svg" alt="wall 2" class="wall wall_2">
+        <img src="img/wall-3.svg" alt="wall 3" class="wall wall_3">
+        <img src="img/wall-2.svg" alt="wall 4" class="wall wall_4">
+       <!-- End Wall -->
+        <!-- Coins -->
+        <div class="coin_group_wrapper left_group">
+          <img src="img/coins.svg" alt="coins" class="coin coin_left">
+          <img src="img/coins.svg" alt="coins" class="coin coin_left">
+          <img src="img/coins.svg" alt="coins" class="coin coin_left">
+        </div>
+        <div class="coin_group_wrapper mid_group">
+          <div class="mid_group__top_coins">
+            <img src="img/coins.svg" alt="coins" class="coin">
+            <img src="img/coins.svg" alt="coins" class="coin">
+          </div>
+          <div class="mid_group__bottom_coins">
+            <img src="img/coins.svg" alt="coins" class="coin">
+            <img src="img/coins.svg" alt="coins" class="coin">
+          </div>
+        </div>
+        <div class="coin_group_wrapper three_quarters_group">
+          <img src="img/coins.svg" alt="coins" class="coin">
+          <img src="img/coins.svg" alt="coins" class="coin">
+        </div>
+
+        <div class="coin_group_wrapper last_group">
+          <div class="last_group__top_coin">
+            <img src="img/coins.svg" alt="coins" class="coin">
+          </div>
+          <div class="last_group__bottom_coin">
+            <img src="img/coins.svg" alt="coins" class="coin">
+            <img src="img/coins.svg" alt="coins" class="coin">
+          </div>
+        </div>
+        <!-- End Coins -->
+
+
+
       </div>
     </div>
   </main>
-  <script type="text/javascript" src="constants.js"></script>
-  <script src="main.js"></script>
+  <script type="text/javascript" src="js/constants.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
