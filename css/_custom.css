@@ -1,0 +1,184 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  color: #000000;
+  background-color: white;
+}
+body{
+  font-size: 1.6rem;
+}
+
+/* bg_layer */
+.bg_layer{
+  background-image: url('../img/background.svg');
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
+  background-position: center;
+}
+
+/* Begin Mario */
+#mario{
+  max-height: auto;
+  position: absolute;
+  width: 4%;
+}
+
+.mario__jump{
+  animation: MoveUpDown 1s linear 1;
+  bottom: var(--floor);
+  left:32%;
+}
+.mario__forward{
+  left:32%;
+  bottom: var(--floor);
+  animation: leftToRight 1s ease-in-out forwards;
+}
+/* End Mario */
+
+/* Begin Wall */
+.wall{
+  width: 100%;
+  position: absolute;
+  min-height: 4.3rem;
+}
+.wall_1{
+  max-width: 13%;
+  left: 3%;
+  bottom: 30rem;
+}
+
+.wall_2{
+  max-width: 7%;
+  left: 52%;
+  bottom: 30rem;
+}
+.wall_3{
+  max-width: 7%;
+  left: 59%;
+  bottom: 45rem;
+}
+.wall_4{
+  max-width: 7%;
+  left: 66%;
+  bottom: 30rem;
+}
+/* End Wall */
+
+/* Begin water_pipe */
+.water_pipe{
+  max-width: 5%;
+  bottom: var(--floor);
+  position:absolute;
+}
+.water_pipe_bottle{
+  left: 18%;
+}
+
+.water_pipe_logo{
+  left:80%;
+}
+/* End water_pipe */
+
+/* gold Coins */
+.coin_group_wrapper{
+  position: absolute;
+}
+.left_group{
+  display: flex;
+  justify-content:space-around;
+  max-width:13%;
+  bottom: 45rem;
+  left: 3%;
+  width: 100%;
+}
+/* mid group */
+
+.mid_group{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between; 
+  bottom: 40rem;
+  left: 36%;
+  max-width:13%;
+  width: 100%;
+  align-items: center;
+}
+.mid_group__top_coins, .mid_group__bottom_coins{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.mid_group__top_coins{
+  justify-content:space-evenly;
+}
+.mid_group__bottom_coins{
+  justify-content:space-between;
+  margin-top: 1rem;
+}
+/* End mid group */
+.three_quarters_group{
+  display: flex;
+  justify-content: space-between; 
+  bottom: 50rem;
+  left: 73%;
+  max-width:6%;
+  width: 100%;
+  align-items: center;
+}
+.last_group{
+  display: flex;
+  flex-direction: column;
+  bottom: 40rem;
+  left: 87%;
+  max-width:9%;
+  width: 100%;
+  align-items: center;
+}
+.last_group__bottom_coin{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.coin{
+  max-width: 3.8rem;
+  height: auto;
+  width: 100%;
+}
+/* End gold Coins */
+/* Begin Yoshi */
+.yoshi{
+  width: 6%;
+  left: 24%;
+  position: absolute;
+  bottom:var(--floor);
+}
+
+.yoshi__forward{
+  left:24%;
+  bottom: var(--floor);
+  animation: leftToRight 1s ease-in-out forwards;
+}
+
+.peach{
+  width: 5%;
+  left: 41%;
+  position: absolute;
+  bottom:var(--floor);
+}
+.peach__forward{
+  left:41%;
+  bottom: var(--floor);
+  animation: leftToRight 1s ease-in-out forwards;
+}
