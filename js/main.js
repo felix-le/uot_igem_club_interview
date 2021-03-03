@@ -5,11 +5,17 @@ window.addEventListener('load', (event) => {
   singleBottle();
   multiBottle();
   igemToLogo();
+  bulletMove();
 });
 
 // Mario run function
 function marioRun() {
   const MARIO = document.querySelector('#mario');
+  const midleCoin1 = document.querySelector('.mid_btn_coin1');
+  const midleCoin2 = document.querySelector('.mid_btn_coin2');
+  const wall2 = document.querySelector('.wall_2');
+  const wall3 = document.querySelector('.wall_3');
+
   let intervalMarioId = null;
   let marioPosition = 32;
   function calcMarioPoisition() {
@@ -19,7 +25,7 @@ function marioRun() {
   }
 
   function runInterval() {
-    if (marioPosition < 90) {
+    if (marioPosition < 69) {
       setTimeout(function () {
         if (MARIO.classList.contains('mario__jump')) {
           MARIO.classList.remove('mario__jump');
@@ -30,8 +36,26 @@ function marioRun() {
           MARIO.classList.remove('mario__forward');
         }
       }, 1000);
+      if (
+        marioPosition > 33 &&
+        marioPosition < 36 &&
+        MARIO.classList.contains('mario__jump')
+      ) {
+        midleCoin1.style.opacity = '0';
+      }
+      if (marioPosition > 43 && MARIO.classList.contains('mario__jump')) {
+        midleCoin2.style.opacity = '0';
+      }
+
+      if (marioPosition > 48 && MARIO.classList.contains('mario__jump')) {
+        wall2.style.opacity = '0';
+      }
+      if (marioPosition > 63 && MARIO.classList.contains('mario__jump')) {
+        wall3.style.opacity = '0';
+      }
     } else {
       clearInterval(intervalMarioId);
+      MARIO.classList.remove('mario__jump');
     }
   }
   intervalMarioId = setInterval(runInterval, 1000);
@@ -48,23 +72,22 @@ function yoshiRun() {
   }
 
   function runInterval() {
-    if (yoshiPosition < 90) {
+    if (yoshiPosition < 65) {
       setTimeout(function () {
         if (YOSHI.classList.contains('yoshi__forward')) {
           calcYoshiPoisition();
-        } else {
-          YOSHI.classList.add('yoshi__forward');
         }
       }, 1000);
     } else {
       clearInterval(intervaYoshi);
+      YOSHI.classList.remove('yoshi__forward');
     }
   }
   intervaYoshi = setInterval(runInterval, 2000);
 }
 
 function peachRun() {
-  const PEACH = document.querySelector('#peach');
+  const PEACH = document.querySelector('.peach');
   let intervalPeach = null;
   let peachPosition = 41;
   function calcPeachPosition() {
@@ -74,16 +97,15 @@ function peachRun() {
   }
 
   function runInterval() {
-    if (peachPosition < 90) {
+    if (peachPosition < 75) {
       setTimeout(function () {
         if (PEACH.classList.contains('peach__forward')) {
           calcPeachPosition();
-        } else {
-          PEACH.classList.add('peach__forward');
         }
       }, 1000);
     } else {
       clearInterval(intervalPeach);
+      PEACH.classList.remove('peach__forward');
     }
   }
   intervalPeach = setInterval(runInterval, 2000);
@@ -146,4 +168,9 @@ function igemToLogo() {
     }, 1000);
   }
   intervaYoshi = setInterval(runInterval, 1000);
+}
+// Bullet move
+function bulletMove() {
+  const bullet = document.querySelector('.bullet_bill');
+  bullet.classList.add('bullet_bill__move');
 }
