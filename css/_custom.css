@@ -180,5 +180,33 @@ body{
 .peach__forward{
   left:41%;
   bottom: var(--floor);
-  animation: leftToRight 1s ease-in-out forwards;
+  animation: leftToRight 1s ease-in-out forwards, spin 1s infinite;
+}
+
+.single_plastics_bottle{
+  position: absolute;
+  max-width: 2%;
+  left: 19.5%;
+  bottom: 260px;
+}
+
+.singleBottle__down{
+  bottom: 245px;
+}
+.singleBottle__up{
+  bottom: 260px;
+}
+
+.multi_plastics_bottle{
+  position: absolute;
+  left: 87.5%;
+  max-width: 8%;
+  bottom: 160px;
+}
+
+.multi_plastics_bottle___down{
+  bottom: 160px;
+}
+.multi_plastics_bottle__up{
+  bottom: 145px;
 }
