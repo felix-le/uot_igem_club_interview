@@ -15,7 +15,9 @@ function marioRun() {
   const midleCoin2 = document.querySelector('.mid_btn_coin2');
   const wall2 = document.querySelector('.wall_2');
   const wall4 = document.querySelector('.wall_4');
-
+  const rightHand = document.querySelector('#rightHand');
+  const leftHand = document.querySelector('#leftHand');
+  // setAttribute("class", "democlass");
   let intervalMarioId = null;
   let marioPosition = 32;
   function calcMarioPoisition() {
@@ -31,9 +33,13 @@ function marioRun() {
           MARIO.classList.remove('mario__jump');
           MARIO.classList.add('mario__forward');
           calcMarioPoisition();
+          rightHand.setAttribute('transform', 'translate(0,-90) rotate(0)');
+          leftHand.setAttribute('transform', 'translate(0,90) rotate(0)');
         } else {
           MARIO.classList.add('mario__jump');
           MARIO.classList.remove('mario__forward');
+          rightHand.setAttribute('transform', '0, 0');
+          leftHand.setAttribute('transform', '0,0');
         }
       }, 1000);
       if (
@@ -56,6 +62,8 @@ function marioRun() {
     } else {
       clearInterval(intervalMarioId);
       MARIO.classList.remove('mario__jump');
+      rightHand.setAttribute('transform', '0, 0');
+      leftHand.setAttribute('transform', '0,0');
     }
   }
   intervalMarioId = setInterval(runInterval, 1000);
