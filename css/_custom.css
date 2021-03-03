@@ -31,17 +31,20 @@ body{
   max-height: auto;
   position: absolute;
   width: 4%;
+  left:32%;
 }
 
 .mario__jump{
   animation: MoveUpDown 1s linear 1;
   bottom: var(--floor);
   left:32%;
+  transition: animation 1s ease-in-out;
 }
 .mario__forward{
   left:32%;
   bottom: var(--floor);
   animation: leftToRight 1s ease-in-out forwards;
+  transition: animation 1s ease-in-out;
 }
 /* End Mario */
 
@@ -86,6 +89,7 @@ body{
 
 .water_pipe_logo{
   left:80%;
+  z-index: 1;
 }
 /* End water_pipe */
 
@@ -145,7 +149,7 @@ body{
   align-items: center;
 }
 .last_group__bottom_coin{
-  margin-top: 10px;
+  margin-top: 1rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -176,37 +180,64 @@ body{
   left: 41%;
   position: absolute;
   bottom:var(--floor);
+  transition: animation 1s ease-in-out;
 }
 .peach__forward{
   left:41%;
   bottom: var(--floor);
   animation: leftToRight 1s ease-in-out forwards, spin 1s infinite;
+  transition: animation 1s ease-in-out;
 }
 
 .single_plastics_bottle{
   position: absolute;
   max-width: 2%;
   left: 19.5%;
-  bottom: 260px;
+  bottom: 26rem;
+  
 }
 
 .singleBottle__down{
-  bottom: 245px;
+  bottom: 24.5rem;
+  transition: bottom 1s ease-in-out;
 }
 .singleBottle__up{
-  bottom: 260px;
+  bottom: 26rem;
+  transition: bottom 1s ease-in-out;
 }
 
 .multi_plastics_bottle{
   position: absolute;
   left: 87.5%;
   max-width: 8%;
-  bottom: 160px;
+  bottom: 16rem;
+  transition: bottom 1s ease-in-out;
 }
 
 .multi_plastics_bottle___down{
-  bottom: 160px;
+  bottom: 16rem;
+  transition: bottom 1s ease-in-out;
 }
 .multi_plastics_bottle__up{
-  bottom: 145px;
+  bottom: 14.5rem;
+  transition: bottom 1s ease-in-out;
+}
+/* iGemTo logo */
+
+.igemto_logo{
+  position: absolute;
+  max-width: 3%;
+  left: 81%;
+  bottom: 23.4rem;
+  z-index: 0;
+  transition: bottom 1s ease-in-out;
+}
+
+.igemto_logo__up{
+  bottom: 23.4rem;
+  transition: bottom 1s ease-in-out;
+}
+.igemto_logo__down{
+  bottom: 20.4rem;
+  transition: bottom 1s ease-in-out;
 }

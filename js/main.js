@@ -4,6 +4,7 @@ window.addEventListener('load', (event) => {
   peachRun();
   singleBottle();
   multiBottle();
+  igemToLogo();
 });
 
 // Mario run function
@@ -107,8 +108,6 @@ function singleBottle() {
   intervaYoshi = setInterval(runInterval, 1000);
 }
 
-//
-
 function multiBottle() {
   const multi_plastics_bottle = document.querySelector(
     '.multi_plastics_bottle'
@@ -124,6 +123,25 @@ function multiBottle() {
       } else {
         multi_plastics_bottle.classList.remove('multi_plastics_bottle__up');
         multi_plastics_bottle.classList.add('multi_plastics_bottle__down');
+      }
+    }, 1000);
+  }
+  intervaYoshi = setInterval(runInterval, 1000);
+}
+
+// iGemTo logo
+
+function igemToLogo() {
+  const igemto_logo = document.querySelector('.igemto_logo');
+
+  function runInterval() {
+    setTimeout(function () {
+      if (igemto_logo.classList.contains('igemto_logo__down')) {
+        igemto_logo.classList.remove('igemto_logo__down');
+        igemto_logo.classList.add('igemto_logo__up');
+      } else {
+        igemto_logo.classList.remove('igemto_logo__up');
+        igemto_logo.classList.add('igemto_logo__down');
       }
     }, 1000);
   }
