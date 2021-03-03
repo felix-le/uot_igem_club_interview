@@ -14,7 +14,7 @@ function marioRun() {
   const midleCoin1 = document.querySelector('.mid_btn_coin1');
   const midleCoin2 = document.querySelector('.mid_btn_coin2');
   const wall2 = document.querySelector('.wall_2');
-  const wall3 = document.querySelector('.wall_3');
+  const wall4 = document.querySelector('.wall_4');
 
   let intervalMarioId = null;
   let marioPosition = 32;
@@ -25,7 +25,7 @@ function marioRun() {
   }
 
   function runInterval() {
-    if (marioPosition < 69) {
+    if (marioPosition < 71) {
       setTimeout(function () {
         if (MARIO.classList.contains('mario__jump')) {
           MARIO.classList.remove('mario__jump');
@@ -51,7 +51,7 @@ function marioRun() {
         wall2.style.opacity = '0';
       }
       if (marioPosition > 63 && MARIO.classList.contains('mario__jump')) {
-        wall3.style.opacity = '0';
+        wall4.style.opacity = '0';
       }
     } else {
       clearInterval(intervalMarioId);
@@ -72,7 +72,7 @@ function yoshiRun() {
   }
 
   function runInterval() {
-    if (yoshiPosition < 65) {
+    if (yoshiPosition < 64) {
       setTimeout(function () {
         if (YOSHI.classList.contains('yoshi__forward')) {
           calcYoshiPoisition();
@@ -174,3 +174,5 @@ function bulletMove() {
   const bullet = document.querySelector('.bullet_bill');
   bullet.classList.add('bullet_bill__move');
 }
+
+// Bonus
