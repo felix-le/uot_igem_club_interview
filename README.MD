@@ -37,6 +37,8 @@ Let me know if you have questions. Thanks again for your interest in joining our
 6. Bullet bill - enemy army: moving forward - contrast with others.
 7. Bonus: hand movement of the three characters.
 
+The animations follow
+
 ## The methods build:
 
 1. Use image + css + HTML file + hard code Js (easy)
@@ -47,4 +49,23 @@ All of them need to take the every individual character in the whole image.
 
 - With method 1: use to add/remove class and static HTML
 - With method 2: use to add/remove class and dynamic HTML
-- With method 3: need to dig into svg files.
+- With method 3: need to dig into svg files - use transform / matrix for change the vectors
+
+Because I'm learning, so I decided that using pure JavaScript and HTML, CSS (without libs, or frameworks - ReactJS, SCSS, Gulp etc.).
+By the way, I'm in my middle test so I am not ready for method 3. When having time, I will do method 3.
+
+## Structures
+
+**Way 1**
++-- index.html
+| +-- css
+| +-- \_custom.css
+| +-- \_generics.css
+| +-- \_keyframe.css
+| +-- \_variables.css
++-- img
+| +-- svg files
++-- js
+| +-- constants.js
+| +-- main.js
+**Way 2**
