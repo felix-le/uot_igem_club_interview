@@ -38,8 +38,8 @@ function marioRun() {
         } else {
           MARIO.classList.add('mario__jump');
           MARIO.classList.remove('mario__forward');
-          rightHand.setAttribute('transform', '0, 0');
-          leftHand.setAttribute('transform', '0,0');
+          rightHand.setAttribute('transform', 'translate(0,0)');
+          leftHand.setAttribute('transform', 'translate(0,0)');
         }
       }, 1000);
       if (
@@ -62,8 +62,8 @@ function marioRun() {
     } else {
       clearInterval(intervalMarioId);
       MARIO.classList.remove('mario__jump');
-      rightHand.setAttribute('transform', '0, 0');
-      leftHand.setAttribute('transform', '0,0');
+      rightHand.setAttribute('transform', 'translate(0,0)');
+      leftHand.setAttribute('transform', 'translate(0,0)');
     }
   }
   intervalMarioId = setInterval(runInterval, 1000);
@@ -71,6 +71,9 @@ function marioRun() {
 
 function yoshiRun() {
   const YOSHI = document.querySelector('#yoshi');
+  const yoshiLeftFoot = document.querySelector('#leftFoot');
+  const yoshiRightFoot = document.querySelector('#rightFoot');
+
   let intervaYoshi = null;
   let yoshiPosition = 24;
   function calcYoshiPoisition() {
@@ -84,11 +87,20 @@ function yoshiRun() {
       setTimeout(function () {
         if (YOSHI.classList.contains('yoshi__forward')) {
           calcYoshiPoisition();
+          yoshiRightFoot.setAttribute(
+            'transform',
+            'translate(-40,0) rotate(0)'
+          );
+          yoshiLeftFoot.setAttribute('transform', 'translate(40,0) rotate(0)');
         }
       }, 1000);
+      yoshiRightFoot.setAttribute('transform', 'translate(0,0) rotate(0)');
+      yoshiLeftFoot.setAttribute('transform', 'translate(0,0) rotate(0)');
     } else {
       clearInterval(intervaYoshi);
       YOSHI.classList.remove('yoshi__forward');
+      yoshiRightFoot.setAttribute('transform', 'translate(0,0) rotate(0)');
+      yoshiLeftFoot.setAttribute('transform', 'translate(0,0) rotate(0)');
     }
   }
   intervaYoshi = setInterval(runInterval, 2000);
@@ -96,6 +108,8 @@ function yoshiRun() {
 
 function peachRun() {
   const PEACH = document.querySelector('.peach');
+  const peachArm = document.querySelector('#_x3C_peachArm_x3E_');
+
   let intervalPeach = null;
   let peachPosition = 41;
   function calcPeachPosition() {
@@ -108,11 +122,14 @@ function peachRun() {
     if (peachPosition < 75) {
       setTimeout(function () {
         if (PEACH.classList.contains('peach__forward')) {
+          peachArm.setAttribute('transform', 'translate(0,-30) rotate(0)');
           calcPeachPosition();
         }
       }, 1000);
+      peachArm.setAttribute('transform', 'translate(0,0) rotate(0)');
     } else {
       clearInterval(intervalPeach);
+      peachArm.setAttribute('transform', 'translate(0,0)');
       PEACH.classList.remove('peach__forward');
     }
   }
