@@ -37,9 +37,11 @@ Way 2: Change value of matrix / animate / transform for building (intermediate)
 | +-- generics.css
 | +-- keyframe.css
 | +-- variables.css
+| +-- style.css
 +-- img
 | +-- svg files
 +-- js
 | +-- constants.js
+| +-- helpers.js
 | +-- main.js
 ```
