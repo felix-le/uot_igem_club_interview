@@ -1,4 +1,9 @@
-window.addEventListener('load', (event) => {
+// Bonus
+const beginStory = $('#beginStory');
+const overlay = $('.overlay');
+const storyContent = $('marquee').textContent;
+
+beginStory.addEventListener('click', () => {
   marioRun();
   yoshiRun();
   peachRun();
@@ -6,6 +11,8 @@ window.addEventListener('load', (event) => {
   multiBottle();
   igemToLogo();
   bulletMove();
+  overlay.style.display = 'none';
+  speakNow(storyContent);
 });
 
 // Mario run function
@@ -212,5 +219,3 @@ function bulletMove() {
   const bullet = document.querySelector('.bullet-wrapper');
   bullet.classList.add('bullet-wrapper__move');
 }
-
-// Bonus
