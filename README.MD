@@ -29,14 +29,17 @@ Way 2: Change value of matrix / animate / transform for building (intermediate)
 ## Structures
 
 **Way 1**
+
+```bash
 +-- index.html
 | +-- css
-| +-- \_custom.css
-| +-- \_generics.css
-| +-- \_keyframe.css
-| +-- \_variables.css
+| +-- custom.css
+| +-- generics.css
+| +-- keyframe.css
+| +-- variables.css
 +-- img
 | +-- svg files
 +-- js
 | +-- constants.js
 | +-- main.js
+```
