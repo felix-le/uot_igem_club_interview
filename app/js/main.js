@@ -10,13 +10,16 @@ window.addEventListener('load', (event) => {
 
 // Mario run function
 function marioRun() {
-  const MARIO = document.querySelector('#mario');
-  const midleCoin1 = document.querySelector('.mid_btn_coin1');
-  const midleCoin2 = document.querySelector('.mid_btn_coin2');
-  const wall2 = document.querySelector('.wall_2');
-  const wall4 = document.querySelector('.wall_4');
-  const rightHand = document.querySelector('#rightHand');
-  const leftHand = document.querySelector('#leftHand');
+  const MARIO = $('#mario');
+  const midleCoin1 = $('.mid_btn_coin1');
+  const midleCoin2 = $('.mid_btn_coin2');
+  const midleCoin3 = $('.mid_btn_coin3');
+  const midleCoin4 = $('.mid_btn_coin4');
+  const wall2 = $('.wall_2');
+  const wall3 = $('.wall_3');
+  const wall4 = $('.wall_4');
+  const rightHand = $('#rightHand');
+  const leftHand = $('#leftHand');
   // setAttribute("class", "democlass");
   let intervalMarioId = null;
   let marioPosition = 32;
@@ -49,12 +52,22 @@ function marioRun() {
       ) {
         midleCoin1.style.opacity = '0';
       }
+      if (marioPosition > 37 && MARIO.classList.contains('mario__jump')) {
+        midleCoin3.style.opacity = '0';
+      }
+      if (marioPosition > 41 && MARIO.classList.contains('mario__jump')) {
+        midleCoin4.style.opacity = '0';
+      }
       if (marioPosition > 43 && MARIO.classList.contains('mario__jump')) {
         midleCoin2.style.opacity = '0';
       }
 
       if (marioPosition > 48 && MARIO.classList.contains('mario__jump')) {
         wall2.style.opacity = '0';
+      }
+
+      if (marioPosition > 56 && MARIO.classList.contains('mario__jump')) {
+        wall3.style.opacity = '0';
       }
       if (marioPosition > 63 && MARIO.classList.contains('mario__jump')) {
         wall4.style.opacity = '0';
@@ -196,8 +209,8 @@ function igemToLogo() {
 }
 // Bullet move
 function bulletMove() {
-  const bullet = document.querySelector('.bullet_bill');
-  bullet.classList.add('bullet_bill__move');
+  const bullet = document.querySelector('.bullet-wrapper');
+  bullet.classList.add('bullet-wrapper__move');
 }
 
 // Bonus
